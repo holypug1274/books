@@ -1,10 +1,15 @@
 <div class="box">
     <div class="thumbnail" [class.not-available]="!bookCard.thumbnail">
         <img *ngIf="bookCard.thumbnail" src="{{ bookCard.thumbnail }}" />
-        <span *ngIf="!bookCard.thumbnail">Not Available</span>
+        <div *ngIf="!bookCard.thumbnail">Thumbnail Not Available</div>
     </div>
-    <div class="description">
+    <div class="info">
         <p class="title is-5">{{ bookCard.title }}</p>
         <p class="subtitle is-6">{{ bookCard.authors }}</p>
+        <p *ngIf="bookCard.description" class="description">{{ bookCard.description }}</p>
+        <p class="formats">
+            <span *ngIf="bookCard.epubAvailable" class="tag is-info">EPUB</span>
+            <span *ngIf="bookCard.pdfAvailable" class="tag is-danger">PDF</span>
+        </p>
     </div>
 </div>
