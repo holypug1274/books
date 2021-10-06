@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    font-family: sans-serif;
+
+    header {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7e7e7e;
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .total-books {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 24px;
+    }
+
+    .main-container {
+        margin: 50px;
+    }
+}

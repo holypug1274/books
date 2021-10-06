@@ -1,0 +1,6 @@
+<header>Kortext Books</header>
+<div class="total-books">There are {{ booksCount$ | async }} Books saved in the database</div>
+<div class="main-container">
+    <kortext-books-search-bar (onSearch)="onSearch($event)"></kortext-books-search-bar>
+    <kortext-books-book-cards-container [bookCards]="books$ | async"></kortext-books-book-cards-container>
+</div>

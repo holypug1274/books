@@ -1,0 +1,20 @@
+<div class="text-container">
+    <input
+        class="input"
+        type="text"
+        [formControl]="formControlSearchTerm"
+        placeholder="insert one or more search terms..."
+    />
+</div>
+<div class="select">
+    <select class="custom-select" [formControl]="formControlOrderBy">
+        <option value="">Order By</option>
+        <option *ngFor="let option of options" value="{{ option.value }}">{{ option.text }}</option>
+    </select>
+</div>
+
+<div>
+    <button class="button is-info" (click)="search()" [disabled]="formControlSearchTerm.value.length === 0">
+        Search
+    </button>
+</div>

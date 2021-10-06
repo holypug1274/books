@@ -1,0 +1,10 @@
+<div class="box">
+    <div class="thumbnail" [class.not-available]="!bookCard.thumbnail">
+        <img *ngIf="bookCard.thumbnail" src="{{ bookCard.thumbnail }}" />
+        <span *ngIf="!bookCard.thumbnail">Not Available</span>
+    </div>
+    <div class="description">
+        <p class="title is-5">{{ bookCard.title }}</p>
+        <p class="subtitle is-6">{{ bookCard.authors }}</p>
+    </div>
+</div>

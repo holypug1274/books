@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px 50px 10px;
+
+    .text-container {
+        flex-grow: 1;
+    }
+}
